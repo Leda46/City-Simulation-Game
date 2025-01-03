@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-container {
+    width: 60%;
+}
+
+.sidebar {
+    width: 35%;
+    padding: 15px;
+    border-left: 2px solid #ddd;
+}
+
+.modal {
+    display: none;  /* Hidden by default */
+    position: fixed;
+    z-index: 1;  /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); /* Black with transparency */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+
+.container {
+    margin-bottom: 20px;
+}
+
+.slider-container {
+    margin: 10px 0;
+}
+
+#taxRateValue {
+    font-weight: bold;
+}
+
+#incomeDisplay {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+#birthRateDisplay {
+transition: color 0.5s ease-in-out;
+}
+
+
+.button-container {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.building-summary {
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+.activity-log {
+    margin-bottom: 20px;
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.chart-placeholder {
+    border: 1px solid #ccc;
+    height: 200px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Add animation for value changes */
+.value-change {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Keyframes for fadeIn animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Highlight effects for death rate, population, etc. */
+.highlight-change {
+    animation: highlight 0.5s ease-out;
+}
+
+/* Keyframes for highlighting */
+@keyframes highlight {
+    0% {
+        background-color: rgba(255, 255, 0, 0.466);
+        color: rgba(255, 0, 0, 0.618);
+    }
+    100% {
+        background-color: transparent;
+        color: inherit;
+    }
+}

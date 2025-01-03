@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Simulation Game</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+
+    <div class="main-container">
+        <h1>City Simulation Game</h1>
+
+        <div class="container">
+            <label for="taxRateSlider">Tax Rate: </label>
+            <input type="range" id="taxRateSlider" min="0" max="50" value="20" step="1">
+            <span id="taxRateValue">20</span>%
+        </div>
+
+        <div class="container">
+            <p id="incomeDisplay">Income: $1000</p>
+            <p>Population: <span id="populationDisplay">2000</span></p>
+            <p>Birth Rate: <span id="birthRateDisplay">0.05</span></p>
+            <p>Death Rate: <span id="deathRateDisplay">0.02</span></p>
+            <p>Migration Rate: <span id="migrationRateDisplay">0.03</span></p>
+            <p>Power Supply: <span id="powerSupplyDisplay">1000</span></p>
+            <p>Power Demand: <span id="powerDemandDisplay">500</span></p>
+        </div>
+
+        <div class="button-container">
+            <button id="buildSchoolButton">Build School ($200)</button>
+            <button id="buildHospitalButton">Build Hospital ($200)</button>
+            <button id="buildHouseButton">Build House ($200)</button>
+            <button id="buildEnergyButton">Build Renewable Energy ($300)</button>
+
+        </div>
+
+        <div class="building-summary">
+            <p>Buildings Summary:</p>
+            <p>Schools: <span id="schoolCount">0</span></p>
+            <p>Hospitals: <span id="hospitalCount">0</span></p>
+            <p>Houses: <span id="houseCount">0</span></p>
+            <p>Renewable Energy Plants: <span id="energyCount">0</span></p>
+        </div>
+    </div>
+
+    <div id="rulesModal" class="modal">
+        <div class="modal-content">
+            <h2>How to Play</h2>
+            <p>Welcome to the City Simulation Game! Your goal is to manage a city by adjusting taxes, building infrastructure, and balancing resources. Keep an eye on your population, income, and power supply!</p>
+            <ul>
+                <li>Use the tax slider to adjust the tax rate.</li>
+                <li>Build schools, hospitals, houses, and renewable energy plants to grow your city.</li>
+                <li>Monitor your population, income, and power demand.</li>
+                <li>Watch out for natural disasters that can impact your city.</li>
+            </ul>
+            <button id="closeModalButton">Close</button>
+        </div>
+    </div>
+    
+
+    <div class="sidebar">
+        <button id="howToPlayButton">How to Play</button>
+        <h2>Activity Log</h2>
+        <div id="activityLog" class="activity-log"></div>
+
+        <h2>Charts</h2>
+        <div class="chart-container">
+            <canvas id="populationChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <canvas id="incomeChart"></canvas>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
