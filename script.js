@@ -191,7 +191,7 @@ taxRateSlider.addEventListener("input", function () {
 function updatePopulation() {
 const oldPopulation = population;
 const oldBirthRate = birthRate;
-const oldMigrationRate = migrationRate; // Move this line here
+const oldMigrationRate = migrationRate;
 
 population += Math.round(birthRate * population - deathRate * population + migrationRate * population + buildingCount.house * buildings.house.populationIncrease);
 population = Math.max(population, 0);
@@ -280,13 +280,11 @@ let gamePaused = false;  // Flag to track if the game is paused
 // Function to pause the game
 function pauseGame() {
 gamePaused = true;
-// Implement pausing logic, like stopping timers, animations, or game loops
 }
 
 // Function to resume the game
 function resumeGame() {
 gamePaused = false;
-// Implement logic to resume the game (e.g., restarting timers, animations)
 }
 
 // Event listener to open the modal and pause the game
@@ -301,7 +299,7 @@ rulesModal.style.display = "none";  // Hide the modal
 resumeGame();  // Resume the game when the modal is closed
 });
 
-// Optional: Close the modal if the user clicks outside of it
+// Close the modal if the user clicks outside of it
 window.addEventListener("click", (event) => {
 if (event.target === rulesModal) {
 rulesModal.style.display = "none";
